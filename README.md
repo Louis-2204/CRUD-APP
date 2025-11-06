@@ -15,13 +15,21 @@ Application de gestion de bibliothèque construite avec **Next.js 16**, **Prisma
 ```
 app/
 ├── actions/
-│   └── bookActions.ts      # Server Actions (create, update, delete)
+│   └── bookActions.ts          # Server Actions (create, update, delete)
 ├── components/
-│   ├── BookForm.tsx         # Formulaire (Client Component)
-│   └── BookList.tsx         # Liste des livres (Client Component)
+│   ├── AutocompleteInput.tsx   # Input avec auto-complétion
+│   ├── BookForm.tsx            # Formulaire (Client Component)
+│   ├── BookList.tsx            # Liste des livres (Client Component)
+│   ├── BookPageClient.tsx      # Orchestration client avec filtres et pagination
+│   ├── FilterBar.tsx           # Barre de filtrage
+│   └── Pagination.tsx          # Composant de pagination
 ├── data/
-│   └── bookData.ts          # Récupération des données (SSR)
-└── page.tsx                 # Page principale
+│   └── bookData.ts             # Récupération des données (SSR)
+├── page.tsx                    # Page principale (SSR)
+lib/
+├── prisma.ts                   # Client Prisma singleton
+prisma/
+├── schema.prisma               # Schéma de base de données
 ```
 
 ### Technologies utilisées
